@@ -21,7 +21,7 @@ const getNotFound = (url: string | Function) => {
 // should generate error for student not found, should return 404
 const getSingleStudentError = (
   url: string | Function,
-  id: number
+  id: number,
 ): Promise<MessageResponse> => {
   return new Promise((resolve, reject) => {
     request(url)
@@ -42,7 +42,7 @@ const getSingleStudentError = (
 // message should be 'file not valid'
 const postStudentFileError = (
   url: string | Function,
-  student: PostStudent
+  student: PostStudent,
 ): Promise<MessageResponse> => {
   return new Promise((resolve, reject) => {
     request(url)
@@ -66,7 +66,7 @@ const postStudentFileError = (
 // message should be 'student_name is required'
 const postStudentNameError = (
   url: string | Function,
-  student: PostStudent
+  student: PostStudent,
 ): Promise<MessageResponse> => {
   return new Promise((resolve, reject) => {
     request(url)
